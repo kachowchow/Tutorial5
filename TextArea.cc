@@ -4,8 +4,8 @@
 
 using namespace std;
 
-//TextArea::TextArea(int x, int y, int width, int height, string id, string label, RGB fill, RGB border)
-    //: dimensions(x, y, width, height), id(id), text(label), fill(fill), border(border) {}
+// TextArea::TextArea(int x, int y, int width, int height, string id, string label, RGB fill, RGB border)
+//     : dimensions(x, y, width, height), id(id), text(label), fill(fill), border(border) {}
 
 TextArea::TextArea(Rectangle dimensions, string id, string label, RGB fill, RGB border)
     : dimensions(dimensions), id(id), text(label), fill(fill), border(border) {}

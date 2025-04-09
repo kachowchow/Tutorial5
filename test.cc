@@ -1,6 +1,7 @@
 #include <istream>
 #include <string>
 
+#include "TextArea.h"
 #include "TAArray.h"
 #include "Tester.h"
 #include "defs.h"

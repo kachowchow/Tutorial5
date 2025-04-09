@@ -3,18 +3,21 @@ using namespace std;
 
 #include "TAArray.h"
 
-TextAreaArray::TextAreaArray()
+TAArray::TAArray()
+
 {
     size = 0;
     elements = new TextArea *[MAX_ARR];
 }
 
-TextAreaArray::~TextAreaArray()
+TAArray::~TAArray()
+
+
 {
     delete[] elements;
 }
 
-bool TextAreaArray::add(TextArea *ta)
+bool TAArray::add(TextArea *ta)
 {
     if (size >= MAX_ARR)
         return false;
@@ -24,7 +27,7 @@ bool TextAreaArray::add(TextArea *ta)
     return true;
 }
 
-bool TextAreaArray::add(TextArea *ta, int index)
+bool TAArray::add(TextArea *ta, int index)
 {
     if (size >= MAX_ARR || index < 0 || index > size)
         return false;
@@ -39,14 +42,23 @@ bool TextAreaArray::add(TextArea *ta, int index)
     return true;
 }
 
-TextArea *TextAreaArray::get(int index)
+TextArea *TAArray::get(int index) const
 {
     if (index < 0 || index >= size)
         return nullptr;
     return elements[index];
 }
 
-TextArea *TextAreaArray::remove(int index)
+TextArea* TAArray::get(const string& id) const {
+    for (int i = 0; i < size; ++i) {
+        if (elements[i]->getId() == id) {
+            return elements[i];
+        }
+    }
+    return nullptr;
+}
+
+TextArea *TAArray::remove(int index)
 {
     if (index < 0 || index >= size)
         return nullptr;
@@ -61,7 +73,16 @@ TextArea *TextAreaArray::remove(int index)
     return ta;
 }
 
-void TextAreaArray::print()
+TextArea* TAArray::remove(const string& id) {
+    for (int i = 0; i < size; ++i) {
+        if (elements[i]->getId() == id) {
+            return remove(i); 
+        }
+    }
+    return nullptr;
+}
+
+void TAArray::print()
 {
     cout << endl
          << "TextAreas:" << endl;
