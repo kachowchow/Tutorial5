@@ -3,7 +3,7 @@
 
 #include <string>
 #include "RGB.h"
-#include "Rectangle.h"
+#include "defs.h"
 #include <X11/Xlib.h>
 
 using namespace std;
@@ -21,10 +21,10 @@ public:
     RGB getFill() const { return fill; }
     RGB getBorder() const { return border; }
 
-    int getWidth() const { return dimensions.getWidth(); }
-    int getHeight() const { return dimensions.getHeight(); }
+    //int getWidth() const { return dimensions.getWidth(); }
+    //int getHeight() const { return dimensions.getHeight(); }
 
-    void setHeight(int height) { dimensions.setHeight(height); }
+    //void setHeight(int height) { dimensions.setHeight(height); }
 
     void setText(const string &newText) { text = newText; }
     void setDimensions(const Rectangle &newDimensions) { dimensions = newDimensions; }
