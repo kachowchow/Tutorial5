@@ -31,7 +31,7 @@ public:
     void setFill(const RGB &newFill) { fill = newFill; }
     void setBorder(const RGB &newBorder) { border = newBorder; }
 
-    void draw(Display *display, Window win, GC gc, int x, int y);
+    // void draw(Display *display, Window win, GC gc, int x, int y);
 
     bool overlaps(TextArea &ta);
 
