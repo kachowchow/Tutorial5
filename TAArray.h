@@ -25,4 +25,6 @@ private:
     int size;
 };
 
+typedef TextAreaArray TAArray;
+
 #endif
