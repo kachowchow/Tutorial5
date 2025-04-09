@@ -10,16 +10,16 @@ using namespace std;
 TextArea::TextArea(Rectangle dimensions, string id, string label, RGB fill, RGB border)
     : dimensions(dimensions), id(id), text(label), fill(fill), border(border) {}
 
-void TextArea::draw(Display *display, Window win, GC gc, int x, int y)
-{
+// void TextArea::draw(Display *display, Window win, GC gc, int x, int y)
+// {
 
-    XSetForeground(display, gc, fill.getColour());
-    XFillRectangle(display, win, gc, x, y, dimensions.width, dimensions.height);
-    XSetForeground(display, gc, border.getColour());
-    XDrawRectangle(display, win, gc, x, y, dimensions.width, dimensions.height);
-    XSetForeground(display, gc, BlackPixel(display, DefaultScreen(display)));
-    XDrawString(display, win, gc, x + 5, y + 20, text.c_str(), text.length());
-}
+//     XSetForeground(display, gc, fill.getColour());
+//     XFillRectangle(display, win, gc, x, y, dimensions.width, dimensions.height);
+//     XSetForeground(display, gc, border.getColour());
+//     XDrawRectangle(display, win, gc, x, y, dimensions.width, dimensions.height);
+//     XSetForeground(display, gc, BlackPixel(display, DefaultScreen(display)));
+//     XDrawString(display, win, gc, x + 5, y + 20, text.c_str(), text.length());
+// }
 
 bool TextArea::overlaps(TextArea &ta)
 {
